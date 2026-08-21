@@ -51,7 +51,20 @@
           <div><span>04</span><b>Security / VMDR</b><em>Protection</em><i>ONLINE</i></div>
           <div><span>05</span><b>Linux / Virtualization</b><em>Infrastructure</em><i>ONLINE</i></div>
         </div>
-        <div class="terminal-line"><span>root@navneet:~$</span> ./optimize --enterprise --secure</div>
+        <div class="terminal-widget" aria-label="Interactive portfolio terminal">
+          <div class="terminal-header">
+            <span><i></i><i></i><i></i></span>
+            <b>PORTFOLIO TERMINAL</b>
+            <small>LOCAL SHELL</small>
+          </div>
+          <div class="terminal-output" id="terminal-output" aria-live="polite">
+            <div class="terminal-welcome">Type <strong>help</strong> to see available commands.</div>
+          </div>
+          <form class="terminal-form" id="terminal-form" autocomplete="off">
+            <span class="terminal-prompt">root@navneet:~$</span>
+            <input id="terminal-input" class="terminal-input" type="text" aria-label="Terminal command" spellcheck="false" autocapitalize="off" autocomplete="off">
+          </form>
+        </div>
       </div>
     </section>
 

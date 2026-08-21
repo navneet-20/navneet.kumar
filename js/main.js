@@ -167,3 +167,154 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+
+/* Interactive portfolio terminal */
+const terminalForm = document.querySelector('#terminal-form');
+const terminalInput = document.querySelector('#terminal-input');
+const terminalOutput = document.querySelector('#terminal-output');
+
+const terminalHistory = [];
+let historyIndex = 0;
+
+const terminalCommands = {
+  help: () => ({
+    html: `<span class="terminal-success">Available commands</span>\n  about      short profile\n  skills     core technical skills\n  projects   featured projects\n  ls         portfolio files\n  cd         open CV.pdf\n  cv         open CV.pdf\n  pwd        show portfolio path\n  github     open GitHub\n  linkedin   open LinkedIn\n  medium     open Medium\n  contact    show email\n  clear      clear terminal`
+  }),
+
+  about: () => ({
+    html: `<span class="terminal-success">Navneet Kumar</span>\nSystem Engineer focused on endpoint management, infrastructure, security and automation.`
+  }),
+
+  skills: () => ({
+    html: `<span class="terminal-success">Core stack</span>\nIntune · Autopilot · Windows · Entra ID · Active Directory\nPowerShell · Python · Linux · Azure · Proxmox · Qualys VMDR`
+  }),
+
+  projects: () => ({
+    html: `<span class="terminal-success">Featured projects</span>\nSoftwareLicense.fyi · Home Loan Calculator · Math Sprint · Astro Dash\nType <strong>github</strong> to open the repository profile.`
+  }),
+
+  ls: () => ({
+    html: `CV.pdf\nprojects/\nexperience/\neducation/\nengineering-notes/\nREADME.md`
+  }),
+
+  cd: () => ({
+    html: `CV.pdf  <a class="terminal-link" href="CV.pdf" target="_blank" rel="noopener">[open]</a>`
+  }),
+
+  cv: () => ({
+    html: `Opening CV.pdf... <a class="terminal-link" href="CV.pdf" target="_blank" rel="noopener">[open CV]</a>`,
+    open: 'CV.pdf'
+  }),
+
+  pwd: () => ({
+    html: `<span class="terminal-success">https://navneet.webline.cloud/</span>`
+  }),
+
+  github: () => ({
+    html: `<a class="terminal-link" href="https://github.com/navneet-20/navneet.kumar" target="_blank" rel="noopener">https://github.com/navneet-20/navneet.kumar</a>`,
+    open: 'https://github.com/navneet-20/navneet.kumar'
+  }),
+
+  linkedin: () => ({
+    html: `<a class="terminal-link" href="https://www.linkedin.com/in/navneet-pro/" target="_blank" rel="noopener">https://www.linkedin.com/in/navneet-pro/</a>`,
+    open: 'https://www.linkedin.com/in/navneet-pro/'
+  }),
+
+  medium: () => ({
+    html: `<a class="terminal-link" href="https://navneet-kumar.medium.com/" target="_blank" rel="noopener">https://navneet-kumar.medium.com/</a>`,
+    open: 'https://navneet-kumar.medium.com/'
+  }),
+
+  contact: () => ({
+    html: `<span class="terminal-success">navneet7533@gmail.com</span>\n<a class="terminal-link" href="mailto:navneet7533@gmail.com">[send email]</a>`
+  })
+};
+
+function appendTerminalLine(command, result) {
+  const line = document.createElement('div');
+  line.className = 'terminal-line-output';
+  line.innerHTML = `<span class="terminal-prompt-output">root@navneet:~$</span> <span class="terminal-command"></span>\n${result.html}`;
+  line.querySelector('.terminal-command').textContent = command;
+  terminalOutput.appendChild(line);
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+function runTerminalCommand(rawCommand) {
+  const command = rawCommand.trim().toLowerCase();
+
+  if (!command) return;
+
+  if (command === 'clear' || command === 'cls') {
+    terminalOutput.innerHTML = '';
+    return;
+  }
+
+  if (command === 'optimize' || command === './optimize') {
+    appendTerminalLine(command, {
+      html: `<span class="terminal-success">Enterprise optimization pipeline ready.</span>\nIntune · identity · security · infrastructure · automation`
+    });
+    return;
+  }
+
+  const handler = terminalCommands[command];
+
+  if (!handler) {
+    appendTerminalLine(command, {
+      html: `<span class="terminal-muted">command not found:</span> ${command}\nType <strong>help</strong> for available commands.`
+    });
+    return;
+  }
+
+  const result = handler();
+  appendTerminalLine(command, result);
+}
+
+if (terminalForm && terminalInput && terminalOutput) {
+  terminalForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const command = terminalInput.value.trim();
+
+    if (!command) return;
+
+    terminalHistory.push(command);
+    historyIndex = terminalHistory.length;
+
+    runTerminalCommand(command);
+    terminalInput.value = '';
+  });
+
+  terminalInput.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+
+      if (!terminalHistory.length) return;
+
+      historyIndex = Math.max(0, historyIndex - 1);
+      terminalInput.value = terminalHistory[historyIndex] || '';
+    }
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+
+      if (!terminalHistory.length) return;
+
+      historyIndex = Math.min(terminalHistory.length, historyIndex + 1);
+      terminalInput.value = terminalHistory[historyIndex] || '';
+    }
+
+    if (event.key === 'Tab') {
+      event.preventDefault();
+
+      const current = terminalInput.value.trim().toLowerCase();
+      if (!current) return;
+
+      const match = Object.keys(terminalCommands).find((command) =>
+        command.startsWith(current)
+      );
+
+      if (match) terminalInput.value = match;
+    }
+  });
+}

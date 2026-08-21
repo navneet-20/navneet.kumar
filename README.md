@@ -12,3 +12,11 @@ Static portfolio for https://navneet.webline.cloud/
 
 ## Deploy
 Push the files to the `main` branch of the existing `navneet-20/navneet.kumar` repository. Keep the existing `CV.pdf` in the repository root.
+
+
+## V2 updates
+- Added Education section with four institutions.
+- Added light/dark mode toggle with saved preference.
+- Added Medium profile and direct links to supplied Medium articles.
+- Added Medium link in contact section.
+- No unverified LinkedIn article URLs were invented; LinkedIn profile remains linked directly.
