@@ -179,7 +179,15 @@ let historyIndex = 0;
 
 const terminalCommands = {
   help: () => ({
-    html: `<span class="terminal-success">Available commands</span>\n  about      short profile\n  skills     core technical skills\n  projects   featured projects\n  ls         portfolio files\n  cd         open CV.pdf\n  cv         open CV.pdf\n  pwd        show portfolio path\n  github     open GitHub\n  linkedin   open LinkedIn\n  medium     open Medium\n  contact    show email\n  clear      clear terminal`
+    html: `<span class="terminal-success">Available commands</span>\n  neofetch   system-style profile\n  whoami     current profile\n  about      short profile\n  skills     core technical skills\n  projects   featured projects\n  experience career timeline\n  education  academic background\n  status     current portfolio status\n  uptime     portfolio availability\n  date       current date/time\n  tree       portfolio structure\n  ls         portfolio files\n  cd         show CV.pdf\n  cv         open CV.pdf\n  pwd        show portfolio path\n  github     open GitHub\n  linkedin   open LinkedIn\n  medium     open Medium\n  phone      call Navneet\n  whatsapp   open WhatsApp\n  email      send email\n  contact    contact details\n  clear      clear terminal`
+  }),
+
+  neofetch: () => ({
+    html: `<span class="terminal-accent">       _   _             NAVNEET KUMAR</span>\n<span class="terminal-muted">      | \| |             SYSTEM ENGINEER</span>\n<span class="terminal-muted">      |  \| |             ─────────────────</span>\n<span class="terminal-muted">      | |\  |             OS       : Windows / Linux</span>\n<span class="terminal-muted">      |_| \_|             Endpoint : Microsoft Intune</span>\n<span class="terminal-muted">                         Cloud    : Azure / Entra ID</span>\n<span class="terminal-muted">                         Shell    : PowerShell / Bash</span>\n<span class="terminal-muted">                         Exp      : 6+ years</span>`
+  }),
+
+  whoami: () => ({
+    html: `<span class="terminal-success">navneet.kumar</span>\nSystem Engineer · Endpoint · Infrastructure · Automation`
   }),
 
   about: () => ({
@@ -192,6 +200,30 @@ const terminalCommands = {
 
   projects: () => ({
     html: `<span class="terminal-success">Featured projects</span>\nSoftwareLicense.fyi · Home Loan Calculator · Math Sprint · Astro Dash\nType <strong>github</strong> to open the repository profile.`
+  }),
+
+  experience: () => ({
+    html: `<span class="terminal-success">Career</span>\n2024–Present  System Engineer · Clear-Trail Technologies\n2023–2024     Senior Engineer · GMG\n2022–2023     Infrastructure Admin · Publicis Groupe\n2021–2022     Service Desk Analyst · Total IT Consult\n2020–2021     IT Consultant · DCDC Kidney Care`
+  }),
+
+  education: () => ({
+    html: `<span class="terminal-success">Education</span>\n2026–2028  MBA · Information Technology · Galgotias University\n2022–2025  Computer Science / Computer Applications · UPRTOU\n2020–2022  Information Technology · Annamalai University\n2016–2019  Digital Electronics · Ambedkar DSEU`
+  }),
+
+  status: () => ({
+    html: `<span class="terminal-success">SYSTEM STATUS: ONLINE</span>\nEndpoint operations · Identity · Security · Infrastructure · Automation`
+  }),
+
+  uptime: () => ({
+    html: `<span class="terminal-success">PORTFOLIO STATUS</span>\nGitHub Pages · HTTPS · Static deployment · ONLINE`
+  }),
+
+  date: () => ({
+    html: `<span class="terminal-success">${new Date().toLocaleString()}</span>`
+  }),
+
+  tree: () => ({
+    html: `<span class="terminal-muted">navneet.webline.cloud/</span>\n├── CV.pdf\n├── projects/\n├── experience/\n├── education/\n├── engineering-notes/\n└── contact/`
   }),
 
   ls: () => ({
@@ -226,8 +258,20 @@ const terminalCommands = {
     open: 'https://navneet-kumar.medium.com/'
   }),
 
-  contact: () => ({
+  phone: () => ({
+    html: `<span class="terminal-success">+91 75330 02838</span>\n<a class="terminal-link" href="tel:+917533002838">[call now]</a>`
+  }),
+
+  whatsapp: () => ({
+    html: `<a class="terminal-link" href="https://wa.me/917533002838?text=Hi%20Navneet%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener">https://wa.me/917533002838</a>\n[open WhatsApp]`
+  }),
+
+  email: () => ({
     html: `<span class="terminal-success">navneet7533@gmail.com</span>\n<a class="terminal-link" href="mailto:navneet7533@gmail.com">[send email]</a>`
+  }),
+
+  contact: () => ({
+    html: `<span class="terminal-success">Contact</span>\nPhone: <a class="terminal-link" href="tel:+917533002838">+91 75330 02838</a>\nEmail: <a class="terminal-link" href="mailto:navneet7533@gmail.com">navneet7533@gmail.com</a>`
   })
 };
 
@@ -333,6 +377,8 @@ function setRecruiterMode(open) {
 }
 
 recruiterOpen?.addEventListener('click', () => setRecruiterMode(true));
+const recruiterNavOpen = document.querySelector('#recruiter-nav-open');
+recruiterNavOpen?.addEventListener('click', () => setRecruiterMode(true));
 recruiterClose?.addEventListener('click', () => setRecruiterMode(false));
 recruiterModal?.addEventListener('click', (event) => {
   if (event.target.matches('[data-recruiter-close]')) setRecruiterMode(false);

@@ -642,3 +642,12 @@ html[data-theme="light"] .recruiter-panel{background:#fff;border-color:#cbd6e2}
 html[data-theme="light"] .recruiter-head p,html[data-theme="light"] .recruiter-grid p{color:#5f6d7e}
 html[data-theme="light"] .recruiter-grid>div{background:#f8fafc}
 @media(max-width:600px){.hero-actions .btn-recruiter{width:100%;justify-content:center}.recruiter-panel{padding:25px}.recruiter-head{display:block}.recruiter-status{display:block;margin-top:12px}.recruiter-metrics{grid-template-columns:1fr}.recruiter-metrics div{border-right:0;border-bottom:1px solid var(--border)}.recruiter-grid{grid-template-columns:1fr}.recruiter-actions .btn{width:100%;justify-content:center}.quick-contact{width:100%}.quick-contact a{flex:1;text-align:center}}
+
+
+/* V5.1 recruiter header + terminal command styling */
+.nav-identity{display:flex;align-items:center;gap:16px}
+.nav-recruiter{border:1px solid rgba(94,234,212,.55);background:rgba(94,234,212,.08);color:var(--accent);padding:9px 12px;font:600 10px 'JetBrains Mono',monospace;letter-spacing:.03em;cursor:pointer;white-space:nowrap}
+.nav-recruiter:hover{background:var(--accent);color:#06100f}
+.terminal-accent{color:var(--accent)}
+@media(max-width:900px){.nav-identity{gap:10px}.nav-recruiter{font-size:9px;padding:7px 9px}.nav-identity .brand{font-size:20px}}
+@media(max-width:600px){.nav-identity{gap:8px}.nav-recruiter{display:none}}
