@@ -609,3 +609,36 @@ html[data-theme="light"] .terminal-form{
     font-size:7px;
   }
 }
+
+/* Recruiter mode + quick contact */
+.btn-recruiter{cursor:pointer;background:rgba(94,234,212,.06);color:var(--accent);border-color:rgba(94,234,212,.45)}
+.quick-contact{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.quick-contact a{font:600 10px 'JetBrains Mono',monospace;text-decoration:none;color:#aab7c8;border:1px solid var(--border);padding:8px 11px}
+.quick-contact .quick-talk{color:#06100f;background:var(--accent);border-color:var(--accent)}
+.recruiter-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.recruiter-modal.open{display:flex}
+.recruiter-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px)}
+.recruiter-panel{position:relative;width:min(760px,100%);max-height:90vh;overflow:auto;background:linear-gradient(145deg,#101722,#080c12);border:1px solid #304052;box-shadow:0 30px 100px rgba(0,0,0,.55);padding:34px}
+.recruiter-close{position:absolute;right:16px;top:12px;border:0;background:transparent;color:#8d9bad;font-size:28px;cursor:pointer}
+.recruiter-kicker{font:600 10px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--accent);margin-bottom:18px}
+.recruiter-head{display:flex;justify-content:space-between;gap:20px;align-items:start;border-bottom:1px solid var(--border);padding-bottom:22px}
+.recruiter-head h2{font-size:38px;line-height:1;margin:0 0 8px;letter-spacing:-.04em}
+.recruiter-head p{color:#7f8da0;margin:0;font-size:13px}
+.recruiter-status{font:600 9px 'JetBrains Mono',monospace;color:var(--green);white-space:nowrap;padding-top:8px}
+.recruiter-metrics{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border)}
+.recruiter-metrics div{padding:20px;border-right:1px solid var(--border)}
+.recruiter-metrics div:last-child{border:0}
+.recruiter-metrics strong,.recruiter-metrics span{display:block}
+.recruiter-metrics strong{font:600 25px 'JetBrains Mono',monospace}
+.recruiter-metrics span{font-size:10px;color:#718095;margin-top:4px}
+.recruiter-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.recruiter-grid>div{border:1px solid var(--border);padding:20px;background:rgba(255,255,255,.015)}
+.recruiter-grid span{font:600 10px 'JetBrains Mono',monospace;color:#667489;letter-spacing:.12em}
+.recruiter-grid p{font-size:13px;color:#8997aa;margin:12px 0 0}
+.recruiter-actions{display:flex;gap:9px;flex-wrap:wrap}
+.btn-talk{background:#e2e8f0;color:#0b1118;border-color:#e2e8f0}
+.btn-whatsapp{background:#25d366;color:#06100a;border-color:#25d366}
+html[data-theme="light"] .recruiter-panel{background:#fff;border-color:#cbd6e2}
+html[data-theme="light"] .recruiter-head p,html[data-theme="light"] .recruiter-grid p{color:#5f6d7e}
+html[data-theme="light"] .recruiter-grid>div{background:#f8fafc}
+@media(max-width:600px){.hero-actions .btn-recruiter{width:100%;justify-content:center}.recruiter-panel{padding:25px}.recruiter-head{display:block}.recruiter-status{display:block;margin-top:12px}.recruiter-metrics{grid-template-columns:1fr}.recruiter-metrics div{border-right:0;border-bottom:1px solid var(--border)}.recruiter-grid{grid-template-columns:1fr}.recruiter-actions .btn{width:100%;justify-content:center}.quick-contact{width:100%}.quick-contact a{flex:1;text-align:center}}

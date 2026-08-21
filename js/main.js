@@ -318,3 +318,25 @@ if (terminalForm && terminalInput && terminalOutput) {
     }
   });
 }
+
+/* HR / Recruiter mode */
+const recruiterModal = document.querySelector('#recruiter-modal');
+const recruiterOpen = document.querySelector('#recruiter-open');
+const recruiterClose = document.querySelector('#recruiter-close');
+
+function setRecruiterMode(open) {
+  if (!recruiterModal) return;
+  recruiterModal.classList.toggle('open', open);
+  recruiterModal.setAttribute('aria-hidden', String(!open));
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open) recruiterClose?.focus();
+}
+
+recruiterOpen?.addEventListener('click', () => setRecruiterMode(true));
+recruiterClose?.addEventListener('click', () => setRecruiterMode(false));
+recruiterModal?.addEventListener('click', (event) => {
+  if (event.target.matches('[data-recruiter-close]')) setRecruiterMode(false);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && recruiterModal?.classList.contains('open')) setRecruiterMode(false);
+});
