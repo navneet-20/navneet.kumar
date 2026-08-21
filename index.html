@@ -1,143 +1,128 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navneet Kumar | System Engineer | Intune & Endpoint Management</title>
-    <meta name="description" content="Navneet Kumar is a System Engineer specializing in Microsoft Intune, Windows infrastructure, endpoint management, and enterprise IT operations.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        bgDark: '#070A0F',
-                        surface: '#0D1117',
-                        borderGray: '#1B2635',
-                        primary: '#5EEAD4',
-                        secondary: '#60A5FA',
-                        textMain: '#F8FAFC',
-                        textMuted: '#94A3B8'
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navneet Kumar | System Engineer | Intune & Infrastructure</title>
+  <meta name="description" content="Navneet Kumar — System Engineer specializing in Microsoft Intune, endpoint management, Windows infrastructure, automation, security, Azure/Entra ID and Linux operations.">
+  <meta name="author" content="Navneet Kumar">
+  <meta name="theme-color" content="#070a0f">
+  <link rel="canonical" href="https://navneet.webline.cloud/">
+  <meta property="og:title" content="Navneet Kumar | System Engineer">
+  <meta property="og:description" content="Enterprise endpoint, infrastructure, automation and security engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navneet.webline.cloud/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
-<body class="bg-bgDark text-textMain font-sans antialiased selection:bg-primary selection:text-bgDark">
-
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0 bg-bgDark/90 backdrop-blur-md border-b border-borderGray">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center font-mono text-sm">
-            <a href="#" class="font-bold tracking-wider text-textMain">NAVNEET<span class="text-primary">_</span></a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#work" class="hover:text-primary transition">WORK</a>
-                <a href="#experience" class="hover:text-primary transition">EXPERIENCE</a>
-                <a href="#notes" class="hover:text-primary transition">NOTES</a>
-                <a href="#contact" class="hover:text-primary transition">CONTACT</a>
-            </div>
-        </div>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Navneet Kumar home">NK<span>.</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div id="nav-links" class="nav-links">
+        <a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Expertise</a><a href="#projects">Projects</a><a href="#notes">Notes</a><a href="#contact">Contact</a>
+        <a class="nav-resume" href="CV.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center px-6 pt-24 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <!-- Left Side: Copy -->
-            <div class="space-y-6">
-                <div class="inline-block border border-borderGray bg-surface px-3 py-1 rounded font-mono text-xs text-primary mb-4">
-                    [ SYSTEM ONLINE ● ]
-                </div>
-                <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
-                    NAVNEET KUMAR
-                </h1>
-                <h2 class="text-2xl md:text-3xl font-mono text-secondary">
-                    SYSTEM ENGINEER
-                </h2>
-                <p class="font-mono text-sm text-primary tracking-widest uppercase">
-                    Endpoint • Infrastructure • Security
-                </p>
-                <p class="text-lg text-textMuted leading-relaxed max-w-lg">
-                    I build, secure, and automate enterprise IT environments across Microsoft Intune, Windows, Linux, Azure/Entra ID, and modern endpoint infrastructure.
-                </p>
-                <div class="flex gap-4 pt-4 font-mono text-sm">
-                    <a href="#work" class="bg-primary text-bgDark px-6 py-3 hover:bg-teal-400 transition font-bold">
-                        [ EXPLORE MY WORK ]
-                    </a>
-                    <a href="/resume/Navneet-Kumar-CV.pdf" target="_blank" class="border border-borderGray px-6 py-3 hover:border-primary hover:text-primary transition">
-                        [ DOWNLOAD RESUME ]
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Side: Infrastructure Visualization -->
-            <div class="bg-surface border border-borderGray p-8 rounded font-mono text-sm shadow-2xl">
-                <p class="text-center text-textMuted mb-6">┌── SYSTEM STATUS ──┐</p>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center">
-                        <span>● INTUNE</span>
-                        <span class="text-primary">██████████ ONLINE</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span>● WINDOWS</span>
-                        <span class="text-primary">██████████ ONLINE</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span>● ENTRA ID</span>
-                        <span class="text-primary">██████████ ONLINE</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span>● SECURITY</span>
-                        <span class="text-secondary">██████░░░░ ADVANCED</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span>● LINUX</span>
-                        <span class="text-secondary">██████░░░░ ADVANCED</span>
-                    </div>
-                </div>
-                <p class="text-center text-textMuted mt-6">└───────────────────┘</p>
-            </div>
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> SYSTEM ENGINEER · ENTERPRISE IT</div>
+        <h1>Build. Secure.<br><span>Automate.</span></h1>
+        <p class="hero-lead">I manage and automate enterprise IT environments across <strong>Microsoft Intune, Windows, Linux, Azure/Entra ID, endpoint security, patching and infrastructure operations.</strong></p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my work <span>↓</span></a><a class="btn btn-ghost" href="CV.pdf" target="_blank" rel="noopener">Download resume ↗</a></div>
+        <div class="social-row"><a href="https://www.linkedin.com/in/navneet-pro/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/navneet-20" target="_blank" rel="noopener">GitHub ↗</a><a href="mailto:navneet7533@gmail.com">Email ↗</a></div>
+      </div>
+      <div class="system-card reveal delay-1" aria-label="System status overview">
+        <div class="card-top"><span>ENTERPRISE CORE</span><span class="online">● ONLINE</span></div>
+        <div class="core-node"><div class="core-ring"></div><div><strong>NAVNEET.KUMAR</strong><small>INFRASTRUCTURE OPERATIONS</small></div></div>
+        <div class="status-list">
+          <div><span>01</span><b>Microsoft Intune</b><em>Endpoint</em><i>ONLINE</i></div>
+          <div><span>02</span><b>Windows Infrastructure</b><em>Platform</em><i>ONLINE</i></div>
+          <div><span>03</span><b>Entra ID / IAM</b><em>Identity</em><i>ONLINE</i></div>
+          <div><span>04</span><b>Security / VMDR</b><em>Protection</em><i>ONLINE</i></div>
+          <div><span>05</span><b>Linux / Virtualization</b><em>Infrastructure</em><i>ONLINE</i></div>
         </div>
-
-        <!-- Metrics Bar -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 border-t border-borderGray pt-8 font-mono text-center">
-            <div>
-                <p class="text-3xl text-textMain font-bold">6+</p>
-                <p class="text-xs text-textMuted mt-1 uppercase">Years Experience</p>
-            </div>
-            <div>
-                <p class="text-3xl text-textMain font-bold">1,500+</p>
-                <p class="text-xs text-textMuted mt-1 uppercase">Endpoints Managed</p>
-            </div>
-            <div>
-                <p class="text-3xl text-textMain font-bold">400+</p>
-                <p class="text-xs text-textMuted mt-1 uppercase">Hours/Yr Automated</p>
-            </div>
-            <div>
-                <p class="text-3xl text-textMain font-bold">30%</p>
-                <p class="text-xs text-textMuted mt-1 uppercase">Efficiency Gain</p>
-            </div>
-        </div>
+        <div class="terminal-line"><span>root@navneet:~$</span> ./optimize --enterprise --secure</div>
+      </div>
     </section>
 
-    <!-- Connect Section -->
-    <section id="contact" class="py-24 px-6 border-t border-borderGray mt-12 bg-surface">
-        <div class="max-w-3xl mx-auto text-center font-mono">
-            <h2 class="text-2xl font-bold mb-6 text-primary">LET'S CONNECT</h2>
-            <p class="text-textMuted mb-8">Have an infrastructure challenge, automation idea, or opportunity?</p>
-            <div class="flex justify-center gap-6 mb-8 text-sm">
-                <a href="https://www.linkedin.com/in/navneet-pro/" target="_blank" class="hover:text-secondary transition">[ LinkedIn ]</a>
-                <a href="https://github.com/navneet-20" target="_blank" class="hover:text-secondary transition">[ GitHub ]</a>
-                <a href="mailto:navneet7533@gmail.com" class="hover:text-secondary transition">[ Email ]</a>
-            </div>
-            <p class="text-textMuted text-xs">Noida, Uttar Pradesh, India</p>
-        </div>
+    <section class="metrics container" id="work">
+      <div class="metric"><strong>6+</strong><span>Years IT experience</span></div>
+      <div class="metric"><strong>1,500+</strong><span>Endpoints supported</span></div>
+      <div class="metric"><strong>400+</strong><span>Hours/year reduced through automation</span></div>
+      <div class="metric"><strong>250–300</strong><span>Support tickets/month</span></div>
+      <div class="metric"><strong>70+</strong><span>Healthcare centers supported</span></div>
     </section>
 
+    <section class="section container" id="about">
+      <div class="section-label">01 · PROFILE</div>
+      <div class="two-col">
+        <div><h2>Engineering the layer<br>people depend on.</h2></div>
+        <div class="copy"><p>I’m Navneet Kumar, a System Engineer focused on enterprise endpoint management, Windows infrastructure, identity, security and automation.</p><p>My strongest area is modern endpoint engineering with Microsoft Intune and Autopilot, backed by hands-on experience with Active Directory, Entra ID, patching, imaging, vulnerability management, Linux, virtualization and operational support.</p><p>I enjoy turning repetitive IT work into reliable, documented and scalable workflows.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="skills">
+      <div class="container">
+        <div class="section-label">02 · EXPERTISE</div>
+        <div class="section-heading"><h2>What I engineer</h2><p>Tools and capabilities I use across enterprise environments.</p></div>
+        <div class="skill-grid">
+          <article class="skill-card"><span>01</span><h3>Endpoint Engineering</h3><p>Intune · Autopilot · Enrollment · Compliance · Profiles · Security Baselines · Update Rings · BitLocker · Application Deployment · Endpoint Central · Imaging</p></article>
+          <article class="skill-card"><span>02</span><h3>Identity & Access</h3><p>Active Directory · Entra ID · Group Policy · Security Groups · IAM · Azure RBAC · Conditional Access · Provisioning · ADManager Plus</p></article>
+          <article class="skill-card"><span>03</span><h3>Security</h3><p>Microsoft Defender · Qualys VMDR · Vulnerability Management · Malware Remediation · Endpoint Security · DLP · Antivirus · Access Governance</p></article>
+          <article class="skill-card"><span>04</span><h3>Windows & Linux</h3><p>Windows Server · Windows endpoints · OS patching · DNS · DHCP · Ubuntu · CentOS · Oracle Linux · Packages · Services · Bash · WSL</p></article>
+          <article class="skill-card"><span>05</span><h3>Cloud & Virtualization</h3><p>Microsoft Azure · Entra ID · RBAC · AWS · Private Cloud · Proxmox · Virtual Machines · Cloud Administration</p></article>
+          <article class="skill-card"><span>06</span><h3>Automation & Operations</h3><p>PowerShell · Python · GitHub Actions · Reporting Automation · Provisioning Automation · ServiceNow · Incident Management · SLA · Documentation</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-label">03 · FEATURED PROJECTS</div>
+      <div class="section-heading"><h2>Things I’ve built.</h2><p>Projects that show how I approach automation, infrastructure and useful software.</p></div>
+      <article class="featured-project">
+        <div class="project-main"><div class="project-kicker">FLAGSHIP · ACTIVE</div><h3>SoftwareLicense.fyi</h3><p>AI-powered software license intelligence directory built as a zero-budget, self-sustaining automation pipeline.</p><div class="tags"><span>GitHub Actions</span><span>Python</span><span>Gemini AI</span><span>Static Data</span><span>GitHub Pages</span></div><div class="project-actions"><a class="btn btn-primary" href="https://isitfree.webline.cloud/" target="_blank" rel="noopener">Live project ↗</a><a class="btn btn-ghost" href="https://github.com/navneet-20/SoftwareLicense.fyi" target="_blank" rel="noopener">Repository ↗</a></div></div>
+        <div class="pipeline"><div><b>GitHub Actions</b><small>scheduled trigger</small></div><span>↓</span><div><b>Python</b><small>discovery automation</small></div><span>↓</span><div><b>Gemini AI</b><small>license intelligence</small></div><span>↓</span><div><b>Static JSON</b><small>repository data</small></div><span>↓</span><div><b>GitHub Pages</b><small>live website</small></div></div>
+      </article>
+      <div class="project-grid">
+        <a class="project-card" href="https://github.com/navneet-20/home-loan-calculator-with-prepayment" target="_blank" rel="noopener"><span>WEB APP</span><h3>Home Loan Calculator</h3><p>Interactive loan and prepayment modeling with browser-side calculations.</p><b>View repository ↗</b></a>
+        <a class="project-card" href="https://github.com/navneet-20/Math-Sprint" target="_blank" rel="noopener"><span>INTERACTIVE</span><h3>Math Sprint</h3><p>Browser-based mathematics challenge focused on speed and interaction.</p><b>View repository ↗</b></a>
+        <a class="project-card" href="https://github.com/navneet-20/Astro-Dash" target="_blank" rel="noopener"><span>GAME</span><h3>Astro Dash</h3><p>JavaScript browser game exploring UI, interaction and game logic.</p><b>View repository ↗</b></a>
+        <a class="project-card" href="https://github.com/navneet-20" target="_blank" rel="noopener"><span>LAB</span><h3>More experiments</h3><p>Explore the wider GitHub lab: automation, infrastructure, Python and web projects.</p><b>View GitHub ↗</b></a>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="experience">
+      <div class="container"><div class="section-label">04 · EXPERIENCE</div><div class="section-heading"><h2>Where I’ve worked.</h2><p>Enterprise IT, infrastructure and multi-site operations.</p></div>
+        <div class="timeline">
+          <article class="timeline-item active"><div class="timeline-dot"></div><div class="timeline-meta">APR 2024 — PRESENT</div><h3>System Engineer · Clear-Trail Technologies</h3><ul><li>Manage 1,500+ Windows endpoints through Intune, Autopilot and manual provisioning.</li><li>Build customized Windows imaging workflows and integrate security tooling.</li><li>Operate Proxmox VMs, monitor infrastructure and work with Qualys VMDR.</li><li>Create PowerShell automation for reporting, onboarding and maintenance.</li></ul></article>
+          <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-meta">DEC 2023 — MAR 2024</div><h3>Senior Engineer · GMG</h3><ul><li>Automated Active Directory provisioning, deprovisioning and group management.</li><li>Improved provisioning turnaround and reduced recurring manual effort.</li><li>Managed Microsoft 365 permissions, distribution lists and identity workflows.</li></ul></article>
+          <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-meta">APR 2022 — DEC 2023</div><h3>Infrastructure Admin · Publicis Groupe</h3><ul><li>Managed Windows endpoints with Intune, compliance policies, security baselines and update rings.</li><li>Administered macOS with Jamf and supported Android enrollment issues.</li><li>Managed Active Directory, Entra ID, Microsoft 365 and ServiceNow operations.</li></ul></article>
+          <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-meta">MAY 2021 — APR 2022</div><h3>Service Desk Analyst · Total IT Consult</h3><ul><li>Supported 10+ client environments including Nokia, SC Johnson and Mondelēz International.</li><li>Handled P1/P2 incidents, triage, escalation and SLA-driven ticket operations.</li></ul></article>
+          <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-meta">AUG 2020 — MAY 2021</div><h3>IT Consultant · DCDC Kidney Care</h3><ul><li>Supported IT operations across 70+ healthcare centers and head office.</li><li>Handled endpoints, networking, Windows patching, DLP, assets and vendors.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="method">
+      <div class="section-label">05 · HOW I WORK</div><div class="section-heading"><h2>My infrastructure mindset.</h2><p>I don’t just close the ticket. I look for the system behind it.</p></div>
+      <div class="method-grid"><div><strong>01</strong><h3>Discover</h3><p>Understand the failure, user impact and operational context.</p></div><div><strong>02</strong><h3>Standardize</h3><p>Turn one-off fixes into repeatable procedures and controls.</p></div><div><strong>03</strong><h3>Automate</h3><p>Remove repetitive work with PowerShell, Python and platform automation.</p></div><div><strong>04</strong><h3>Secure</h3><p>Validate the change against identity, endpoint and security requirements.</p></div><div><strong>05</strong><h3>Document</h3><p>Capture the solution so the next engineer can operate it.</p></div><div><strong>06</strong><h3>Optimize</h3><p>Measure the result and improve the workflow continuously.</p></div></div>
+    </section>
+
+    <section class="section section-dark" id="notes"><div class="container"><div class="section-label">06 · ENGINEERING NOTES</div><div class="section-heading"><h2>What I write about.</h2><p>Practical notes from Windows, Linux, cloud and DevOps work.</p></div><div class="notes-grid"><article><span>MAR 2025 · 1 MIN</span><h3>How to Install Jenkins</h3><p>A practical setup note for getting Jenkins running.</p></article><article><span>DEC 2024 · 3 MIN</span><h3>How to Install Apache Superset on Ubuntu</h3><p>Linux and application setup notes from the lab.</p></article><article><span>NOV 2024 · 6 MIN</span><h3>Windows Server and Multi-User Access</h3><p>Exploring Windows Server access and operational considerations.</p></article><article><span>OCT 2024</span><h3>Register an Application as a Windows Service</h3><p>A step-by-step technical guide.</p></article></div></div></section>
+
+    <section class="section container" id="credentials"><div class="section-label">07 · CREDENTIALS</div><div class="credential-grid"><div><span>CERTIFICATION</span><h3>MD-102</h3><p>Microsoft 365 Certified: Endpoint Administrator Associate</p></div><div><span>CERTIFICATION</span><h3>Qualys VMDR</h3><p>Qualys Certified Specialist</p></div><div><span>CERTIFICATION</span><h3>AZ-900</h3><p>Microsoft Azure Fundamentals</p></div><div><span>LEARNING</span><h3>Linux · Python · CCNA</h3><p>Linux administration, Python automation and networking fundamentals.</p></div></div></section>
+
+    <section class="contact section" id="contact"><div class="container contact-box"><div><div class="section-label">08 · CONTACT</div><h2>Let’s build something<br><span>reliable.</span></h2><p>Open to infrastructure, endpoint engineering and automation opportunities.</p></div><div class="contact-links"><a href="mailto:navneet7533@gmail.com"><small>EMAIL</small>navneet7533@gmail.com ↗</a><a href="https://www.linkedin.com/in/navneet-pro/" target="_blank" rel="noopener"><small>LINKEDIN</small>linkedin.com/in/navneet-pro ↗</a><a href="https://github.com/navneet-20" target="_blank" rel="noopener"><small>GITHUB</small>github.com/navneet-20 ↗</a></div></div></section>
+  </main>
+  <footer class="footer container"><span>NAVNEET KUMAR · SYSTEM ENGINEER</span><span>© <span id="year">2026</span> · Built with HTML, CSS & JavaScript</span></footer>
 </body>
 </html>
