@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navneet Kumar | System Engineer Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#3b82f6', secondary: '#10b981' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-white">NK<span class="text-primary">.</span></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#experience" class="hover:text-primary transition">Experience</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+                <a href="CV.pdf" target="_blank" class="border border-primary text-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition">
+                    <i class="fas fa-download mr-2"></i>Download CV
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 space-y-6">
+                <p class="text-primary font-semibold tracking-wide">👋 Hey there! Welcome to my portfolio.</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+                    I'm <span class="gradient-text">Navneet Kumar</span>.
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-gray-400 font-medium">
+                    System Engineer & IT Infrastructure Specialist.
+                </h2>
+                <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
+                    I thrive on solving complex technical challenges, automating workflows, and ensuring seamless IT operations. Whether it's managing enterprise servers, automating AD tasks, or securing cloud environments, I love optimizing systems to make IT smoother and more efficient.
+                </p>
+                
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="#contact" class="bg-primary text-white px-8 py-3 rounded font-medium hover:bg-blue-600 transition shadow-lg shadow-blue-500/30">Get In Touch</a>
+                    <div class="flex gap-4 ml-4">
+                        <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="text-gray-400 hover:text-white text-2xl transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/navneet-20" target="_blank" class="text-gray-400 hover:text-white text-2xl transition"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 bg-gray-800/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 flex items-center">
+                <span class="text-primary mr-3">01.</span> Professional Experience
+            </h2>
+            
+            <div class="space-y-12 border-l-2 border-gray-700 ml-3 md:ml-0 pl-6 md:pl-8">
+                
+                <!-- Role 1 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] md:-left-[41px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-gray-900"></div>
+                    <h3 class="text-2xl font-semibold text-white">System Engineer <span class="text-primary">@ Clear-Trail Technologies</span></h3>
+                    <p class="text-sm text-gray-400 mb-4 font-mono tracking-wide">Apr 2024 - Present</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 marker:text-primary">
+                        <li>Manage Windows enrollment with Autopilot and manual provisioning for 1500+ device endpoints across the enterprise.</li>
+                        <li>Automate Windows Imaging with fully customized ISOs including security tool installations.</li>
+                        <li>Handle internal VMs using Proxmox and monitor system health and vulnerability scans via Qualys VMDR.</li>
+                        <li>Develop automation using PowerShell scripting for repetitive tasks like reporting, onboarding, and maintenance.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] md:-left-[41px] top-1 h-4 w-4 rounded-full bg-gray-700 group-hover:bg-primary transition ring-4 ring-gray-900"></div>
+                    <h3 class="text-2xl font-semibold text-white">Infrastructure Admin <span class="text-primary">@ Publicis Groupe</span></h3>
+                    <p class="text-sm text-gray-400 mb-4 font-mono tracking-wide">Apr 2022 - Dec 2023</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 marker:text-primary">
+                        <li>Enrolled and managed Windows devices using Microsoft Intune, supporting compliance monitoring and endpoint security.</li>
+                        <li>Administered macOS devices using Jamf, including enrollment, profile configuration, and patching support.</li>
+                        <li>Performed identity management across Active Directory and Azure AD, handling provisioning and security groups.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] md:-left-[41px] top-1 h-4 w-4 rounded-full bg-gray-700 group-hover:bg-primary transition ring-4 ring-gray-900"></div>
+                    <h3 class="text-2xl font-semibold text-white">Service Desk Analyst <span class="text-primary">@ Total IT Global</span></h3>
+                    <p class="text-sm text-gray-400 mb-4 font-mono tracking-wide">May 2021 - Apr 2022</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 marker:text-primary">
+                        <li>Provided Level 1 support for enterprise client environments including Nokia and Mondelēz International.</li>
+                        <li>Managed high-priority P1/P2 incidents, executing initial troubleshooting and escalation coordination.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="relative group">
+                    <div class="absolute -left-[35px] md:-left-[41px] top-1 h-4 w-4 rounded-full bg-gray-700 group-hover:bg-primary transition ring-4 ring-gray-900"></div>
+                    <h3 class="text-2xl font-semibold text-white">IT Consultant <span class="text-primary">@ DCDC Kidney Care</span></h3>
+                    <p class="text-sm text-gray-400 mb-4 font-mono tracking-wide">Aug 2020 - May 2021</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 marker:text-primary">
+                        <li>Supported IT operations for 70+ hospital centers, managing Windows patching, network configuration, and DLP.</li>
+                        <li>Managed IT asset inventory, vendor coordination, and daily multi-site hardware troubleshooting.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
+            <p class="text-gray-400 mb-8">
+                Currently exploring new opportunities and side projects. Whether you have a question about IT Infrastructure or just want to say hi, my inbox is always open!
+            </p>
+            <div class="space-y-4 mb-8 text-gray-300">
+                <p><i class="fas fa-map-marker-alt text-primary w-6"></i> South Delhi, Noida / NCR</p>
+                <p><i class="fas fa-envelope text-primary w-6"></i> iam@navneet-kumar.in</p>
+                <p><i class="fas fa-phone text-primary w-6"></i> +91 7533002838</p>
+            </div>
+            <a href="mailto:iam@navneet-kumar.in" class="inline-block border-2 border-primary text-primary px-8 py-3 rounded font-medium hover:bg-primary hover:text-white transition">Say Hello</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center border-t border-gray-800 text-sm text-gray-500">
+        <p>Built by Navneet Kumar &copy; 2026. Hosted on GitHub Pages at navneet.webline.cloud.</p>
+    </footer>
+
+</body>
+</html>
