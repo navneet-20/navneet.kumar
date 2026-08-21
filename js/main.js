@@ -363,7 +363,6 @@ if (terminalForm && terminalInput && terminalOutput) {
   });
 }
 
-/* HR / Recruiter mode */
 const recruiterModal = document.querySelector('#recruiter-modal');
 const recruiterOpen = document.querySelector('#recruiter-open');
 const recruiterClose = document.querySelector('#recruiter-close');
