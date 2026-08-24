@@ -651,3 +651,15 @@ html[data-theme="light"] .recruiter-grid>div{background:#f8fafc}
 .terminal-accent{color:var(--accent)}
 @media(max-width:900px){.nav-identity{gap:10px}.nav-recruiter{font-size:9px;padding:7px 9px}.nav-identity .brand{font-size:20px}}
 @media(max-width:600px){.nav-identity{gap:8px}.nav-recruiter{display:none}}
+
+/* V5.3 visual cleanup */
+.hero-actions .btn-recruiter{display:none}
+.quick-contact{margin-top:18px}
+.quick-contact a:not(.quick-talk){display:none}
+.notes-grid-wide{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.notes-grid-wide{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.notes-grid-wide{grid-template-columns:1fr}}
+
+/* Keep the progress control subtle and out of the content flow. */
+.scroll-progress{width:64px;height:64px;right:18px;bottom:18px;opacity:.82}
+.scroll-progress-label small{font-size:6px}
